@@ -39,3 +39,17 @@ body {
   padding: 20px;
 }
 
+/* Colours - card headers */
+
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
