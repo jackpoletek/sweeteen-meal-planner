@@ -71,3 +71,28 @@ body {
   background-color: #218838;
 }
 
+/* GI Guide Colors */
+
+.low {
+  color: green;
+  font-weight: bold;
+}
+
+.medium {
+  color: orange;
+  font-weight: bold;
+}
+
+.high {
+  color: red;
+  font-weight: bold;
+}
+
+.gi-guide-list {
+  list-style-type: none;
+}
+
+.gi-guide-list li {
+  margin-bottom: 8px;
+}
+
