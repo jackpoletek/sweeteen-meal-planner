@@ -1,4 +1,4 @@
-/* General */
+/* General Styles */
 body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
@@ -97,3 +97,30 @@ body {
   font-style: italic;
 }
 
+/* Responsive Design */
+
+/* Mobile */
+@media (min-width: 576px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Tablet */
+    @media (min-width: 768px) {
+        
+    }
+}
