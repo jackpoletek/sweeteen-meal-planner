@@ -121,6 +121,25 @@ body {
 
     /* Tablet */
     @media (min-width: 768px) {
-        
+        .container {
+            max-width: 720px;
+            padding: 1.5rem;
+        }
+
+        .card {
+            margin-bottom: 2rem;
+        }
+    }
+
+    /* Desktop */
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px;
+            padding: 2rem;
+        }
+
+        .card {
+            margin-bottom: 2.5rem;
+        }
     }
 }
