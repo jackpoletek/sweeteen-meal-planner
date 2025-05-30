@@ -1,5 +1,4 @@
 /* General */
-
 body, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
@@ -14,14 +13,12 @@ body {
 }
 
 /* Containers */
-
 .container {
   max-width: 800px;
   margin: 0 auto;
 }
 
 /* Cards */
-
 .card {
   background: white;
   border-radius: 8px;
@@ -40,7 +37,6 @@ body {
 }
 
 /* Colours - card headers */
-
 .bg-primary {
   background-color: #007bff !important;
 }
@@ -54,7 +50,6 @@ body {
 }
 
 /* Buttons */
-
 .btn {
   display: inline-block;
   padding: 10px 15px;
@@ -71,8 +66,7 @@ body {
   background-color: #218838;
 }
 
-/* GI Guide Colors */
-
+/* GI Guide Colours */
 .low {
   color: green;
   font-weight: bold;
@@ -94,5 +88,12 @@ body {
 
 .gi-guide-list li {
   margin-bottom: 8px;
+}
+
+/* Placeholder text */
+.text-placeholder,
+#results {
+  color: #999;
+  font-style: italic;
 }
 
