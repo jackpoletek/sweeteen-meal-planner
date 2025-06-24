@@ -1,5 +1,4 @@
-{
-  "low_gi": [
+  [
     {"name": "cherries", "carbs": 12, "glycemicIndex": 22, "portion": 100},
     {"name": "grapefruit", "carbs": 11, "glycemicIndex": 25, "portion": 100},
     {"name": "peanuts", "carbs": 8, "glycemicIndex": 14, "portion": 30},
@@ -34,9 +33,7 @@
     {"name": "kidney beans", "carbs": 22, "glycemicIndex": 24, "portion": 100},
     {"name": "black beans", "carbs": 23, "glycemicIndex": 30, "portion": 100},
     {"name": "soybeans", "carbs": 8, "glycemicIndex": 16, "portion": 100},
-    {"name": "dark chocolate (85%)", "carbs": 14, "glycemicIndex": 23, "portion": 30}
-  ],
-  "medium_gi": [
+    {"name": "dark chocolate (85%)", "carbs": 14, "glycemicIndex": 23, "portion": 30},
     {"name": "banana (ripe)", "carbs": 23, "glycemicIndex": 62, "portion": 100},
     {"name": "pineapple", "carbs": 13, "glycemicIndex": 59, "portion": 100},
     {"name": "mango", "carbs": 15, "glycemicIndex": 56, "portion": 100},
@@ -71,9 +68,7 @@
     {"name": "orange juice", "carbs": 11, "glycemicIndex": 50, "portion": 100},
     {"name": "pita bread (white)", "carbs": 20, "glycemicIndex": 68, "portion": 30},
     {"name": "coconut sugar", "carbs": 100, "glycemicIndex": 54, "portion": 10},
-    {"name": "molasses", "carbs": 75, "glycemicIndex": 55, "portion": 20}
-  ],
-  "high_gi": [
+    {"name": "molasses", "carbs": 75, "glycemicIndex": 55, "portion": 20},
     {"name": "white bread", "carbs": 15, "glycemicIndex": 75, "portion": 30},
     {"name": "white rice", "carbs": 28, "glycemicIndex": 73, "portion": 100},
     {"name": "cornflakes", "carbs": 84, "glycemicIndex": 81, "portion": 30},
@@ -110,4 +105,3 @@
     {"name": "mashed banana", "carbs": 23, "glycemicIndex": 74, "portion": 100},
     {"name": "couscous (instant)", "carbs": 23, "glycemicIndex": 73, "portion": 100}
   ]
-}
