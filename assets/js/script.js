@@ -9,12 +9,9 @@ async function getData() {
         `Failed to load JSON: ${response.status} ${response.statusText}`
       );
     }
-
+    
     const data = await response.json();
-    console.log(data);
-
-    console.log("Data from JSON Loaded", data.length, "food items");
-    return data;
+ 
   } catch (error) {
     console.error("Fetching data failed:", error);
 
