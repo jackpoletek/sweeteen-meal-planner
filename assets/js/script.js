@@ -61,12 +61,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     let totalCarbs = selectedFoods.reduce((sum, food) => sum + food.carbs, 0);
     const mealGI = calculateMealGI(selectedFoods);
 
-    foods.forEach((item) => {
-      // Extract carbs
-      const match = item.textContent.match(/(\d+)g carbs/);
-      if (match) totalCarbs += parseInt(match[1]);
-    });
-
     // Display results
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = `
