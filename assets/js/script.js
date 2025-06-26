@@ -31,9 +31,10 @@ async function getData() {
   }
 }
 
-document.addEventListener("LoadDOMContent", async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // Get data and load JSON
   const getAllFoods = await getData();
+  let selectedFoods = [];
 
   // Food search function
   function searchFoods(term) {
@@ -44,22 +45,21 @@ document.addEventListener("LoadDOMContent", async () => {
 
   // Add food to meal
   function addFoodToMeal(food) {
-    // Simple implementation - just add to list
+    // Add food to list
+    selectedFoods.push(food);
+
     const list = document.getElementById("selectedFoodsList");
     const item = document.createElement("div");
     item.textContent = `${food.name} - ${food.carbs}g carbs`;
-    list.appendItem(item);
+    list.appendChild(item);
 
-    // Simple calculation
     calculateTotals();
   }
 
   // Calculate totals
   function calculateTotals() {
-    const foods = Array.from(
-      document.querySelectorAll("#selectedFoodsList > div")
-    );
-    let totalCarbs = 0;
+    let totalCarbs = selectedFoods.reduce((sum, food) => sum + food.carbs, 0);
+    const mealGI = calculateMealGI(selectedFoods);
 
     foods.forEach((item) => {
       // Extract carbs
@@ -71,6 +71,7 @@ document.addEventListener("LoadDOMContent", async () => {
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = `
       <p>Total Carbs: ${totalCarbs}g</p>
+      <p>Meal Glycemic Index: ${mealGI.toFixed(1)}</p>
       <p>Insulin Needed: ${(totalCarbs / 10).toFixed(1)} units</p>
     `;
   }
@@ -95,3 +96,18 @@ document.addEventListener("LoadDOMContent", async () => {
     .getElementById("mealType")
     .addEventListener("change", calculateTotals);
 });
+
+// Calculate total GI of each meal
+function calculateMealGI(foodList) {
+  if (foodList.length === 0) return 0;
+  
+  let totalWeight = 0;
+  let totalCarbs = 0;
+  
+  for (food of foodList) {
+    totalWeight += food.glycemicIndex * food.carbs;
+    totalCarbs += food.carbs;
+  }
+  
+  return totalCarbs > 0 ? totalWeight / totalCarbs : 0;
+}
