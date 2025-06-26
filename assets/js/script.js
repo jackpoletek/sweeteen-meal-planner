@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = `
       <p>Total Carbs: ${totalCarbs}g</p>
-      <p>Meal Glycemic Index: ${mealGI.toFixed(1)}</p>
+      <p>Meal Glycaemic Index: ${mealGI.toFixed(1)}</p>
       <p>Insulin Needed: ${(totalCarbs / 10).toFixed(1)} units</p>
     `;
   }
@@ -92,6 +92,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   document
     .getElementById("mealType")
     .addEventListener("change", calculateTotals);
+
+  // Clear All button
+  document
+    .getElementById("clearSelection")
+    .addEventListener("click", function () {
+      // Clear selected foods
+      selectedFoods = [];
+
+      // Clear food list
+      const list = document.getElementById("selectedFoodsList");
+      list.innerHTML = '<p class="text-placeholder">No foods selected</p>';
+    });
 });
 
 // Calculate total GI of each meal
