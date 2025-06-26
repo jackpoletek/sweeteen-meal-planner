@@ -13,13 +13,8 @@ async function getData() {
     const data = await response.json();
     console.log(data);
 
-    console.log(
-      "Data from JSON Loaded",
-      data.length,
-      "food items"
-    );
+    console.log("Data from JSON Loaded", data.length, "food items");
     return data;
-
   } catch (error) {
     console.error("Fetching data failed:", error);
 
@@ -45,6 +40,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Add food to meal
   function addFoodToMeal(food) {
+    // Remove placeholder
+    const placeholder = document.querySelector(
+      "#selectedFoodsList .text-placeholder"
+    );
+    if (placeholder) {
+      placeholder.textContent = "You have selected the following foods:";
+    }
+
     // Add food to list
     selectedFoods.push(food);
 
@@ -94,14 +97,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 // Calculate total GI of each meal
 function calculateMealGI(foodList) {
   if (foodList.length === 0) return 0;
-  
+
   let totalWeight = 0;
   let totalCarbs = 0;
-  
+
   for (food of foodList) {
     totalWeight += food.glycemicIndex * food.carbs;
     totalCarbs += food.carbs;
   }
-  
+
   return totalCarbs > 0 ? totalWeight / totalCarbs : 0;
 }
