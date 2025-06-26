@@ -103,6 +103,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Clear food list
       const list = document.getElementById("selectedFoodsList");
       list.innerHTML = '<p class="text-placeholder">No foods selected</p>';
+      
+      // Reset totals
+      calculateTotals();
     });
 });
 
