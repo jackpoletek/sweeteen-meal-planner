@@ -135,7 +135,7 @@ Bugs
 
 
 ## Deployment
-Clone repository: git clone https://github.com/jackpoletek/sweeteen-meal-planner.git
+Clone repository: git clone https://github.com/jackpoletek/sweeteen-meal-planner.git <br>
 **GitHub Pages**  
 git push origin main
 
