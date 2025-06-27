@@ -61,17 +61,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     const matchFound = searchFoods(term);
 
     if (matchFound.length > 0) {
-      matchFound.forEach((food) => {
-        const option = document.createElement("div");
-        option.classList.add("dropdown-item");
-        option.textContent = food.name;
-        option.addEventListener("click", () => {
-          addFoodToMeal(food);
-          foodSearchInput.value = "";
-          foodDropdown.classList.remove("show");
-        });
-        foodDropdown.appendChild(option);
+      // Only show the first match
+      const food = matchFound[0];
+      const option = document.createElement("div");
+      option.classList.add("dropdown-item");
+      option.textContent = food.name;
+      option.addEventListener("click", () => {
+        addFoodToMeal(food);
+        foodSearchInput.value = "";
+        foodDropdown.classList.remove("show");
       });
+      foodDropdown.appendChild(option);
+
       foodDropdown.classList.add("show");
     } else {
       foodDropdown.classList.remove("show");
