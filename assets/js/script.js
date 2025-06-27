@@ -154,6 +154,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Reset totals
       calculateTotals();
     });
+
+  // Close dropdown when clicking outside the search box
+  document.addEventListener("click", (e) => {
+    if (
+      !foodSearchInput.contains(e.target) &&
+      !foodDropdown.contains(e.target)
+    ) {
+      foodDropdown.classList.remove("show");
+    }
+  });
 });
 
 // Calculate total GI of each meal
