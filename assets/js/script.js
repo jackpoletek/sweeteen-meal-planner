@@ -37,12 +37,46 @@ document.addEventListener("DOMContentLoaded", async () => {
     dinner: 1.2,
   };
 
+  // Get DOM elements
+  const foodSearchInput = document.getElementById("foodSearch");
+  const foodDropdown = document.getElementById("foodDropdown");
+
   // Food search function
   function searchFoods(term) {
     return getAllFoods.filter((food) =>
       food.name.toLowerCase().includes(term.toLowerCase())
     );
   }
+
+  // Show user input
+  foodSearchInput.addEventListener("input", function () {
+    const term = this.value.trim();
+    foodDropdown.innerHTML = ""; // Remove previous results
+
+    if (term.length === 0) {
+      foodDropdown.classList.remove("show");
+      return;
+    }
+
+    const matchFound = searchFoods(term);
+
+    if (matchFound.length > 0) {
+      matchFound.forEach((food) => {
+        const option = document.createElement("div");
+        option.classList.add("dropdown-item");
+        option.textContent = food.name;
+        option.addEventListener("click", () => {
+          addFoodToMeal(food);
+          foodSearchInput.value = "";
+          foodDropdown.classList.remove("show");
+        });
+        foodDropdown.appendChild(option);
+      });
+      foodDropdown.classList.add("show");
+    } else {
+      foodDropdown.classList.remove("show");
+    }
+  });
 
   // Add food to meal
   function addFoodToMeal(food) {
@@ -87,16 +121,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Event listeners
   document.getElementById("addFood").addEventListener("click", () => {
-    const searchInput = document.getElementById("foodSearch").value.trim();
+    const searchInput = foodSearchInput.value.trim();
     if (!searchInput) return;
 
-    const matches = searchFoods(searchInput);
-    if (matches.length > 0) {
-      addFoodToMeal(matches[0]);
+    const match = searchFoods(searchInput);
+    if (match.length > 0) {
+      addFoodToMeal(match[0]);
+      foodSearchInput.value = "";
+      foodDropdown.classList.remove("show");
     } else {
-      Swal.fire({
-        text: "Food not found",
-      });
+      Swal.fire({ text: "Food not found" });
     }
   });
 
