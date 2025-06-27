@@ -12,7 +12,6 @@ async function getData() {
 
     const data = await response.json();
     return data;
-
   } catch (error) {
     console.error("Fetching data failed:", error);
 
@@ -24,6 +23,11 @@ async function getData() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", async () => {
+  // Get data and load JSON
+  const getAllFoods = await getData();
+  let selectedFoods = [];
+
   // Insulin factors for each meal type
   const insulinLevels = {
     breakfast: 1.4,
@@ -33,15 +37,10 @@ async function getData() {
     dinner: 1.2,
   };
 
-document.addEventListener("DOMContentLoaded", async () => {
-  // Get data and load JSON
-  const getAllFoods = await getData();
-  let selectedFoods = [];
-
   // Food search function
   function searchFoods(term) {
-    return getAllFoods.filter(
-      (food) => food.name.toLowerCase().includes(term.toLowerCase()) //
+    return getAllFoods.filter((food) =>
+      food.name.toLowerCase().includes(term.toLowerCase())
     );
   }
 

@@ -72,6 +72,27 @@ body {
   background-color: #218838;
 }
 
+/* Food Selection - dropdown */
+#foodDropdown {
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1000;
+}
+
+#foodDropdown.show {
+  display: block !important;
+}
+
+.dropdown-item {
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
 /* Form Elements */
 
 .form-label {
