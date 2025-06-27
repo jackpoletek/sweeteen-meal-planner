@@ -9,9 +9,10 @@ async function getData() {
         `Failed to load JSON: ${response.status} ${response.statusText}`
       );
     }
-    
+
     const data = await response.json();
- 
+    return data;
+
   } catch (error) {
     console.error("Fetching data failed:", error);
 
@@ -22,6 +23,15 @@ async function getData() {
     return [];
   }
 }
+
+  // Insulin factors for each meal type
+  const insulinLevels = {
+    breakfast: 1.4,
+    "second breakfast": 1.3,
+    lunch: 0.8,
+    "afternoon snack": 0.8,
+    dinner: 1.2,
+  };
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Get data and load JSON
@@ -58,15 +68,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Calculate totals
   function calculateTotals() {
+    const mealType = document.getElementById("mealType").value;
+    const insulinSensitivity = insulinLevels[mealType] || 1.0; // 1.0 as default
+
     let totalCarbs = selectedFoods.reduce((sum, food) => sum + food.carbs, 0);
     const mealGI = calculateMealGI(selectedFoods);
+
+    const carbCount = totalCarbs / 10;
+    const insulinNeeded = (insulinSensitivity * carbCount).toFixed(2);
 
     // Display results
     const resultsDiv = document.getElementById("results");
     resultsDiv.innerHTML = `
       <p>Total Carbs: ${totalCarbs}g</p>
       <p>Meal Glycaemic Index: ${mealGI.toFixed(1)}</p>
-      <p>Insulin Needed: ${(totalCarbs / 10).toFixed(1)} units</p>
+      <p>Insulin Needed: ${insulinNeeded} units (${mealType} factor: ${insulinSensitivity})</p>
     `;
   }
 
@@ -100,7 +116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       // Clear food list
       const list = document.getElementById("selectedFoodsList");
       list.innerHTML = '<p class="text-placeholder">No foods selected</p>';
-      
+
       // Reset totals
       calculateTotals();
     });
