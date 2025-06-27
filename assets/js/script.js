@@ -73,6 +73,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
       foodDropdown.appendChild(option);
 
+      // code borrowed from Stack Overflow
+      const containerRect = searchContainer.getBoundingClientRect();
+      foodDropdown.style.position = 'absolute';
+      foodDropdown.style.top = `${containerRect.bottom}px`;
+      foodDropdown.style.left = `${containerRect.left}px`;
+      foodDropdown.style.width = `${containerRect.width}px`;
+
       foodDropdown.classList.add("show");
     } else {
       foodDropdown.classList.remove("show");
