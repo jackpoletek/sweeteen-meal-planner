@@ -94,19 +94,19 @@ APIs: Nutritionix integration (future)
 
 ## Testing & Bug Fixes
 
-// Fixed issues during development:
+Fixed issues during development: <br>
 
-// 1. Undefined foods error
+1. Undefined foods error <br>
 SOLUTION: Removed deprecated array iteration
 
-// 2. Placeholder persistence bug
+2. Placeholder persistence bug <br>
 SOLUTION: Added DOM check before resetting:
   if (placeholder) placeholder.textContent = "Selected foods:";
 
-// 3. Totals not resetting
+3. Totals not resetting <br>
 SOLUTION: Added calculateTotals() in clearSelection
 
-// 4. Dropdown display issues
+4. Dropdown display issues <br>
 SOLUTION: CSS overhaul:
   #foodDropdown {
     position: fixed;
@@ -115,7 +115,6 @@ SOLUTION: CSS overhaul:
     max-height: 2.5rem; /* Single-item view */
   }
 
-Bugs
 
 ### Validation
 - [W3C HTML Validator](https://validator.w3.org/)
