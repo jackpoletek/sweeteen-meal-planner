@@ -76,20 +76,19 @@ APIs: Nutritionix integration (future)
 
 ## Wireframes - Figma()
 
-#### Desktop
+### Desktop
 - large screen_1039px <br>
-()
+(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner%20-%20large%20screen_1039px.pdf)
 
-#### Tablet
+### Tablet
 - tablet_768px <br>
-()
+(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner%20-%20tablet_768px.pdf)
 
-#### Mobile
+### Mobile
 - mobile_398px <br>
-)
+(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner%20-%20mobile_398px.pdf)
 
-[View all wireframes](https://github.com/jackpoletek/)
-
+[View all wireframes](https://github.com/jackpoletek/sweeteen-meal-planner/tree/main/assets/wireframes)
 
 
 ## Testing & Bug Fixes
@@ -117,20 +116,18 @@ SOLUTION: CSS overhaul:
 
 
 ### Validation
-- [W3C HTML Validator](https://validator.w3.org/)
-
-- i <br>
-
+- [W3C HTML Validator](https://validator.w3.org/) <br>
+(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/HTML_checker.jpg)
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) <br>
+(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/CSS_checker.jpg)
 
-()
+- [JS Hint](https://jigsaw.w3.org/css-validator](https://jshint.com/) <br>
+  (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/JS_checker.jpg)
 
 ### Performance
 [Lighthouse Score]  
-
-- i
-()
+(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/lighthouse-test/Lighthouse_sweeteen.jpg)
 
 
 ## Deployment
