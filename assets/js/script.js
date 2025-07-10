@@ -26,7 +26,7 @@ async function getData() {
 document.addEventListener("DOMContentLoaded", async () => {
   // Get data and load JSON
   const getAllFoods = await getData();
-  let selectedFoods = [];
+  let currentMatches = [];
 
   // Insulin factors for each meal type
   const insulinLevels = {
@@ -55,31 +55,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (term.length === 0) {
       foodDropdown.classList.remove("show");
+      currentMatches = [0];
       return;
     }
 
-    const matchFound = searchFoods(term);
+    currentMatches = searchFoods(term);
 
-    if (matchFound.length > 0) {
-      // Only show the first match
-      const food = matchFound[0];
-      const option = document.createElement("div");
-      option.classList.add("dropdown-item");
-      option.textContent = food.name;
-      option.addEventListener("click", () => {
-        addFoodToMeal(food);
-        foodSearchInput.value = "";
-        foodDropdown.classList.remove("show");
+    if (currentMatches.length > 0) {
+      // Iterate through all matches
+      currentMatches.forEach((food) => {
+        const option = document.createElement("div");
+        option.classList.add("dropdown-item");
+        option.textContent = food.name;
+        option.addEventListener("click", () => {
+          addFoodToMeal(food);
+          foodSearchInput.value = "";
+          foodDropdown.classList.remove("show");
+        });
+        foodDropdown.appendChild(option);
       });
-      foodDropdown.appendChild(option);
 
-      // code borrowed from Stack Overflow
-      const containerRect = searchContainer.getBoundingClientRect();
-      foodDropdown.style.position = 'absolute';
-      foodDropdown.style.top = `${containerRect.bottom}px`;
-      foodDropdown.style.left = `${containerRect.left}px`;
-      foodDropdown.style.width = `${containerRect.width}px`;
-
+      // ... existing positioning code ...
       foodDropdown.classList.add("show");
     } else {
       foodDropdown.classList.remove("show");
