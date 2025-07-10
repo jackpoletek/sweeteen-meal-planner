@@ -38,8 +38,8 @@ Sweeteen Meal Planner is a diabetes management web app designed for busy teens w
 
 ### Meal Information
 Breakfast | Second Breakfast | Lunch | Afternoon Snack | Dinner
-Each meal applies unique insulin resistance factors (e.g. Breakfast: 1.4x)
-<br>**User Stories Addressed**:  
+Each meal applies unique insulin resistance factors (e.g. Breakfast: 1.4x)<br>
+<br>**User Stories Addressed**:
 - *"As a student, I want to quickly log lunch carbs between classes"*  
   → Lunch-specific insulin factor (0.8x) enables faster calculation  
 - *"As an athlete, I need accurate insulin calculations for pre-game snacks"*  
@@ -48,8 +48,8 @@ Each meal applies unique insulin resistance factors (e.g. Breakfast: 1.4x)
 ### Food Selection
 - Search 100+ foods from local JSON database
 - Filter by carb count/GI index
-- Real-time typeahead suggestions
-<br>**User Stories Addressed**:  
+- Real-time typeahead suggestions<br>
+<br>**User Stories Addressed**:
 - *"As a student, I want to quickly log lunch carbs between classes"*  
   → Instant search finds foods in <3 keystrokes  
 - *"As an overwhelmed user, I want one-screen meal analysis"*  
@@ -58,8 +58,8 @@ Each meal applies unique insulin resistance factors (e.g. Breakfast: 1.4x)
 ### Selected Foods
 - Visual list of chosen foods
 - Individual carb counts + GI classification
-- Remove/edit functionality
-<br>**User Stories Addressed**:  
+- Remove/edit functionality<br>
+<br>**User Stories Addressed**:
 - *"As a forgetful user, I need to see my selected foods at a glance"*  
   → Persistent visual list shows all selections  
 - *"As a newly diagnosed teen, I want to understand glycemic impact"*  
@@ -69,19 +69,19 @@ Each meal applies unique insulin resistance factors (e.g. Breakfast: 1.4x)
 Total Carbs: 47g
 Meal GI: 62 (Medium Impact)
 Insulin Needed: 4.82 units 
-  = (47g ÷ 10) × 1.4 breakfast factor
-<br>**User Stories Addressed**:  
+  = (47g ÷ 10) × 1.4 breakfast factor<br>
+<br>**User Stories Addressed**:
 - *"As an athlete, I need accurate insulin calculations for pre-game snacks"*  
   → Precise unit calculation accounts for timing and carbs  
 - *"As an overwhelmed user, I want one-screen meal analysis"*  
   → All critical numbers display without scrolling  
 
 ### Glycaemic Index Guide
-Color-coded GI indicators:
-█ Low GI (≤55) - Minimal impact
-█ Medium GI (56-69) - Moderate impact
-█ High GI (≥70) - Rapid blood sugar rise
-<br>**User Stories Addressed**:  
+Color-coded GI indicators:<br>
+█ Low GI (≤55) - Minimal impact<br>
+█ Medium GI (56-69) - Moderate impact<br>
+█ High GI (≥70) - Rapid blood sugar rise<br>
+<br>**User Stories Addressed**:
 - *"As a newly diagnosed teen, I want to understand glycemic impact"*  
   → Visual color system simplifies complex nutrition concepts  
 - *"As a student, I want to quickly log lunch carbs between classes"*  
@@ -149,7 +149,7 @@ SOLUTION: CSS overhaul:
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) <br>
 (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/CSS_checker.jpg)
 
-- [JS Hint](https://jigsaw.w3.org/css-validator](https://jshint.com/) <br>
+- [JS Hint](https://jshint.com/) <br>
   (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/JS_checker.jpg)
 
 ### Performance
