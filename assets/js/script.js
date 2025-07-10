@@ -26,6 +26,7 @@ async function getData() {
 document.addEventListener("DOMContentLoaded", async () => {
   // Get data and load JSON
   const getAllFoods = await getData();
+  let selectedFoods = [];
   let currentMatches = [];
 
   // Insulin factors for each meal type
