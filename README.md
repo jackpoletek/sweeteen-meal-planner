@@ -5,6 +5,8 @@
 
 Sweeteen Meal Planner is a diabetes management web app designed for busy teens with Type 1 diabetes. It simplifies carb counting and insulin dose calculation by providing instant meal analysis based on carb content, glycaemic index, and time-of-day insulin resistance factors.
 
+![Sweeteen Meal Planner]([assets/images/minecraft-education-bg-2.webp](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/Sweeteen_screenshot.jpg))
+
 ## Business & Customer Goals
 ### Business Goals:
 - Reduce barriers to insulin management for young diabetics
@@ -25,40 +27,65 @@ Sweeteen Meal Planner is a diabetes management web app designed for busy teens w
 - Individuals struggling with consistent carb counting
 - Non-medical users needing simplified health tools
 
-### Client Stories:
+### User Stories:
 - As a student, I want to quickly log lunch carbs between classes
 - As an athlete, I need accurate insulin calculations for pre-game snacks
 - As a newly diagnosed teen, I want to understand glycemic impact
 - As a forgetful user, I need to see my selected foods at a glance
 - As an overwhelmed user, I want one-screen meal analysis
 
-## Features
+## Features & User Story Alignment
 
 ### Meal Information
 Breakfast | Second Breakfast | Lunch | Afternoon Snack | Dinner
 Each meal applies unique insulin resistance factors (e.g. Breakfast: 1.4x)
+**User Stories Addressed**:  
+- *"As a student, I want to quickly log lunch carbs between classes"*  
+  → Lunch-specific insulin factor (0.8x) enables faster calculation  
+- *"As an athlete, I need accurate insulin calculations for pre-game snacks"*  
+  → Afternoon snack category with reduced insulin factor (0.8x) 
 
 ### Food Selection
 - Search 100+ foods from local JSON database
 - Filter by carb count/GI index
 - Real-time typeahead suggestions
+**User Stories Addressed**:  
+- *"As a student, I want to quickly log lunch carbs between classes"*  
+  → Instant search finds foods in <3 keystrokes  
+- *"As an overwhelmed user, I want one-screen meal analysis"*  
+  → All selection tools remain visible during use  
 
 ### Selected Foods
 - Visual list of chosen foods
 - Individual carb counts + GI classification
 - Remove/edit functionality
+**User Stories Addressed**:  
+- *"As a forgetful user, I need to see my selected foods at a glance"*  
+  → Persistent visual list shows all selections  
+- *"As a newly diagnosed teen, I want to understand glycemic impact"*  
+  → Color-coded GI classifications teach food impacts  
 
 ### Meal Calculation
 Total Carbs: 47g
 Meal GI: 62 (Medium Impact)
 Insulin Needed: 4.82 units 
   = (47g ÷ 10) × 1.4 breakfast factor
+**User Stories Addressed**:  
+- *"As an athlete, I need accurate insulin calculations for pre-game snacks"*  
+  → Precise unit calculation accounts for timing and carbs  
+- *"As an overwhelmed user, I want one-screen meal analysis"*  
+  → All critical numbers display without scrolling  
 
 ### Glycaemic Index Guide
 Color-coded GI indicators:
 █ Low GI (≤55) - Minimal impact
 █ Medium GI (56-69) - Moderate impact
 █ High GI (≥70) - Rapid blood sugar rise
+**User Stories Addressed**:  
+- *"As a newly diagnosed teen, I want to understand glycemic impact"*  
+  → Visual color system simplifies complex nutrition concepts  
+- *"As a student, I want to quickly log lunch carbs between classes"*  
+  → GI awareness helps make faster, healthier choices  
 
 ## Future Features
 - Mobile App Integration - Sync with Apple Health/Google Fit
@@ -74,7 +101,7 @@ UI: SweetAlert (Swal) for modals
 APIs: Nutritionix integration (future)
 
 
-## Wireframes - Figma()
+## Wireframes - Figma
 
 ### Desktop
 - large screen_1039px <br>
