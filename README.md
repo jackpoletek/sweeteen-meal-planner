@@ -5,7 +5,7 @@
 
 Sweeteen Meal Planner is a diabetes management web app designed for busy teens with Type 1 diabetes. It simplifies carb counting and insulin dose calculation by providing instant meal analysis based on carb content, glycaemic index, and time-of-day insulin resistance factors.
 
-![Sweeteen Meal Planner]([assets/images/minecraft-education-bg-2.webp](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/Sweeteen_screenshot.jpg))
+![Sweeteen Meal Planner](assets/Sweeteen_screenshot.jpg))
 
 ## Business & Customer Goals
 ### Business Goals:
