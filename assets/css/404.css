@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.error-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.error-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.brand {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.error-code {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.error-title {
+    font-size: 1.2rem;
+}
+
+.error-message {
+    font-size: 0.95rem;
+}
+
+.redirect-info {
+    font-size: 0.8rem;
+}
+
+
+/* Mobile */
+@media (min-width: 576px) {
+    .error-card {
+        max-width: 420px;
+        padding: 2rem 1.5rem;
+    }
+
+    .error-code {
+        font-size: 4rem;
+    }
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+    .error-card {
+        max-width: 480px;
+        padding: 2.5rem 2rem;
+    }
+
+    .error-code {
+        font-size: 4.75rem;
+    }
+
+    .error-title {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Desktop */
+@media (min-width: 992px) {
+    .error-card {
+        max-width: 520px;
+    }
+
+    .error-title {
+        font-size: 1.6rem;
+    }
+}
