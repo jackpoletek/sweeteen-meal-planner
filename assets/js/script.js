@@ -69,8 +69,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         option.classList.add("dropdown-item");
         option.textContent = food.name;
         option.addEventListener("click", () => {
-          addFoodToMeal(food);
-          foodSearchInput.value = "";
+          foodSearchInput.value = food.name;
+          currentMatches = [food];
           foodDropdown.classList.remove("show");
         });
         foodDropdown.appendChild(option);
@@ -125,18 +125,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // Event listeners
-  document.getElementById("addFood").addEventListener("click", () => {
-    const searchInput = foodSearchInput.value.trim();
-    if (!searchInput) return;
+  document.getElementById("addFood").addEventListener("click", function(e) {
+    e.preventDefault();
 
-    const match = searchFoods(searchInput);
-    if (match.length > 0) {
-      addFoodToMeal(match[0]);
-      foodSearchInput.value = "";
-      foodDropdown.classList.remove("show");
-    } else {
-      Swal.fire({ text: "Food not found" });
+    if (currentMatches.length === 0) {
+      Swal.fire({ text: "Please enter a food to add" });
+      return;
     }
+
+    addFoodToMeal(currentMatches[0]);
+
+    foodSearchInput.value = "";
+    foodDropdown.classList.remove("show");
+    currentMatches = [];
   });
 
   // Meal type change

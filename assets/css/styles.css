@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #007bff;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --low-gi: green;
+  --medium-gi: orange;
+  --high-gi: red;
+  --light-bg-color: #f5f5f5;
+  --dark-text-color: #333;
+}
+
 /* General Styles */
 body,
 h1,
@@ -49,15 +60,15 @@ body {
 
 /* Colours - card headers */
 .bg-primary {
-  background-color: #007bff !important;
+  background-color: var(--primary-color) !important;
 }
 
 .bg-success {
-  background-color: #28a745 !important;
+  background-color: var(--success-color) !important;
 }
 
 .bg-info {
-  background-color: #17a2b8 !important;
+  background-color: var(--info-color) !important;
 }
 
 /* Buttons */
@@ -132,17 +143,17 @@ body {
 
 /* GI Guide Colours */
 .low {
-  color: green;
+  color: var(--low-gi);
   font-weight: bold;
 }
 
 .medium {
-  color: orange;
+  color: var(--medium-gi);
   font-weight: bold;
 }
 
 .high {
-  color: red;
+  color: var(--high-gi);
   font-weight: bold;
 }
 
@@ -182,7 +193,7 @@ body {
 .intro-text {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #333;
+  color: var(--dark-text-color);
   margin-bottom: 1rem;
 }
 
