@@ -101,22 +101,25 @@ The wireframes ensured:
 
 <br>The final implementation closely follows these wireframes in structure, layout, and interaction design.
 
-#### Desktop
+#### Desktop (992px)
 ![large screen_992px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_1%20-%20desktop_992px.jpg)<br>
 ![large screen_992px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_2%20-%20desktop_992px.jpg)<br>
 ![large screen_992px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_3%20-%20desktop_992px.jpg)
 
-#### Tablet
-- tablet_768px <br>
-![alt text](http://url/to/img.png)
-(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner%20-%20tablet_768px.pdf)
+#### Tablet (768px)
+![tablet_768px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_1%20-%20tablet_768px.jpg)<br>
+![tablet_768px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_2%20-%20tablet_768px.jpg)
 
-#### Mobile
-- mobile_576x <br>
-![alt text](http://url/to/img.png)
-(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner%20-%20mobile_398px.pdf)
+#### Mobile (576px)
+![mobile_576px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_1%20-%20mobile_576px.jpg)<br>
+![mobile_57p6x](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_2%20-%20mobile_576px.jpg)
 
 [View all wireframes](https://github.com/jackpoletek/sweeteen-meal-planner/tree/main/assets/wireframes)
+
+## Handling Non-Existent Pages (404 Redirect)
+This project is deployed using GitHub Pages, which does not support server-side routing. To prevent users from becoming stranded on invalid URLs, a custom 404.html page has been implemented.<br>
+When a user navigates to a non-existent page or resource, GitHub Pages automatically serves the 404.html file. This page includes a timed redirect that returns the user to the main application without requiring browser navigation buttons. A manual return option is also provided.<br>
+This approach improves usability and ensures a smooth and controlled user experience.
 
 ## Future Features
 - Mobile App Integration - Sync with Apple Health/Google Fit
@@ -131,7 +134,34 @@ Data: Local JSON food database
 UI: SweetAlert (Swal) for modals
 APIs: Nutritionix integration (future)
 
-## Testing & Bug Fixes
+## Testing
+### Testing Strategy Overview
+Testing was conducted to ensure the application functions correctly, remains user-friendly, and behaves consistently across devices and screen sizes. In this project, manual testing was prioritised for the following reasons: the application logic is relatively lightweight, and UX clarity and responsiveness are key learning outcomes. Moreover, manual testing allowed immediate validation of user stories. Therefore, automated testing was considered but not implemented at this stage.
+
+### Manual Testing
+Manual testing involves a human tester interacting directly with the application to identify functional issues, usability problems, and layout inconsistencies. This method is particularly suitable for small-scale, UX-focused applications and MVPs.<br>
+Manual testing validated:
+- Food search and selection
+- Insulin calculation accuracy
+- Meal-based insulin factor changes
+- Responsive layout behaviour
+- Error handling and alerts
+
+### Manual Testing Results
+| Feature  | Test Action | Expected Result | Actual Result | Status |
+| -------- | ----------- | --------------- | ------------- | ------ |
+| Food Search | Enter partial name| Matching results appear | Correct | Pass   |
+| Dropdown Selection | Click item | Food added | Correct     | Pass |
+| Add Food Button | Enter valid food | Food added | Correct       | Pass   |
+| Meal Type Change | Switch meal | Factor updates | Correct       | Pass   |
+| Calculations | Add multiple foods | Accurate totals | Correct       | Pass   |
+| Clear All | Click button | Reset occurs | Correct       | Pass   |
+| Invalid Input | Unknown food | Alert shown | Correct       | Pass   |
+| Responsiveness | Resize screen | Layout adapts | Correct       | Pass   |
+| Dropdown Close | Click outside | Dropdown closes | Correct       | Pass   |
+
+
+### Bug Fixes
 
 Fixed issues during development: <br>
 
@@ -192,6 +222,7 @@ No external images used (minimalist design)
 Huge thanks to my lecturer and above all to my mentor who provided the simplest and most effective solutions when it came to implementing them in the app.
 As usual, big thanks to the City of Bristol College and Code Institute.
 Last but not least - thanks to Urszula who inspired me to make this app.
+
 
 
 
