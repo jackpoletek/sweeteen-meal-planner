@@ -111,7 +111,7 @@ The wireframes ensured:
 ![tablet_768px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_2%20-%20tablet_768px.jpg)
 
 #### Mobile (576px)
-![mobile_576px](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_1%20-%20mobile_576px.jpg)<br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_1%20-%20mobile_576px.jpg" alt="Mobile (576px)" width=20% height=20%/><br>
 ![mobile_57p6x](https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_2%20-%20mobile_576px.jpg)
 
 [View all wireframes](https://github.com/jackpoletek/sweeteen-meal-planner/tree/main/assets/wireframes)
@@ -222,6 +222,7 @@ No external images used (minimalist design)
 Huge thanks to my lecturer and above all to my mentor who provided the simplest and most effective solutions when it came to implementing them in the app.
 As usual, big thanks to the City of Bristol College and Code Institute.
 Last but not least - thanks to Urszula who inspired me to make this app.
+
 
 
 
