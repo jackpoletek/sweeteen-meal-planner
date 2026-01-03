@@ -204,12 +204,6 @@ Displayed GI value<br>
 GI guide visible below<br><br>
 <img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Understanding%20GI%20impact%20-%20breakfast.jpg" alt="Understanding GI impact" width=60% height=60%/>
 
-## Future Features
-- Mobile App Integration - Sync with Apple Health/Google Fit
-- Bolus Calculator - Factor in current blood glucose levels
-- Meal History - Track trends over time
-- Social Sharing - Safe recipe exchange between users
-
 ## Technologies Used
 Frontend: HTML5, CSS3, Bootstrap 5
 Logic: Vanilla JavaScript
@@ -217,31 +211,37 @@ Data: Local JSON food database
 UI: SweetAlert (Swal) for modals
 APIs: Nutritionix integration (future)
 
-## Validation
-- [W3C HTML Validator](https://validator.w3.org/) <br>
-(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/HTML_checker.jpg)
+## Future Features
+- Mobile App Integration - Sync with Apple Health/Google Fit
+- Bolus Calculator - Factor in current blood glucose levels
+- Meal History - Track trends over time
+- Social Sharing - Safe recipe exchange between users
 
-- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) <br>
-(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/CSS_checker.jpg)
+## Validation and Performance
+- W3C HTML Validation - Passed<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/HTML_checker.jpg" alt="W3C HTML Validator" width=50% height=50%/>
 
-- [JS Hint](https://jshint.com/) <br>
-  (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/JS_checker.jpg)
+- W3C CSS Validation - Passed<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/CSS_checker.jpg" alt="W3C CSS Validation" width=50% height=50%/>
 
-## Performance
-[Lighthouse Score]  
-(https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/lighthouse-test/Lighthouse_sweeteen.jpg)
+- JSHint - No critical issues<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/JS_checker.jpg" alt="JSHint" width=50% height=50%/>
 
+- Lighthouse Audit - High scores for Accessibility, Performance, and Best Practices<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/lighthouse-test/Lighthouse_sweeteen.jpgg" alt="Lighthouse Score" width=50% height=50%/>
 
 ## Deployment
-Clone repository: git clone https://github.com/jackpoletek/sweeteen-meal-planner.git <br>
-**GitHub Pages**  
-git push origin main
+The project was deployed using GitHub Pages:<br>
+<ol>
+<li>Clone the repository</li>
+<li>Push changes to the main branch</li>
+<li>Enable GitHub Pages in repository settings</li>
+</ol>
 
 ## Credits
-
-### Content
+### Content:
 - Food database: USDA nutritional data (modified)
-- GI classifications: International GI Foundation
+- GI classifications based on International GI Foundation resources
 
 ### Media
 No external images used (minimalist design)
@@ -251,9 +251,9 @@ No external images used (minimalist design)
 - UI patterns: Bootstrap 5 documentation
 
 ## Aknowledgements:
-Huge thanks to my lecturer and above all to my mentor who provided the simplest and most effective solutions when it came to implementing them in the app.
-As usual, big thanks to the City of Bristol College and Code Institute.
-Last but not least - thanks to Urszula who inspired me to make this app.
+Huge thanks to my lecturer and mentor for guidance throughout development, to City of Bristol College and Code Institute for academic support.
+Last but not least - thanks to Urszula who inspired the project concept.
+
 
 
 
