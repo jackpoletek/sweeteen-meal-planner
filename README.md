@@ -121,19 +121,6 @@ This project is deployed using GitHub Pages, which does not support server-side 
 When a user navigates to a non-existent page or resource, GitHub Pages automatically serves the 404.html file. This page includes a timed redirect that returns the user to the main application without requiring browser navigation buttons. A manual return option is also provided.<br>
 This approach improves usability and ensures a smooth and controlled user experience.
 
-## Future Features
-- Mobile App Integration - Sync with Apple Health/Google Fit
-- Bolus Calculator - Factor in current blood glucose levels
-- Meal History - Track trends over time
-- Social Sharing - Safe recipe exchange between users
-
-## Technologies Used
-Frontend: HTML5, CSS3, Bootstrap 5
-Logic: Vanilla JavaScript
-Data: Local JSON food database
-UI: SweetAlert (Swal) for modals
-APIs: Nutritionix integration (future)
-
 ## Testing
 ### Testing Strategy Overview
 Testing was conducted to ensure the application functions correctly, remains user-friendly, and behaves consistently across devices and screen sizes. In this project, manual testing was prioritised for the following reasons: the application logic is relatively lightweight, and UX clarity and responsiveness are key learning outcomes. Moreover, manual testing allowed immediate validation of user stories. Therefore, automated testing was considered but not implemented at this stage.
@@ -160,6 +147,14 @@ Manual testing validated:
 | Responsiveness | Resize screen | Layout adapts | Correct | Pass |
 | Dropdown Close | Click outside | Dropdown closes | Correct | Pass |
 
+### Automated Testing
+Automated testing uses scripts and tools to execute predefined test cases and compare expected outputs with actual results. It is best suited for larger projects, complex logic, or applications with frequent updates.<br>
+Potential future automated tests include:
+- Unit tests for insulin calculation formulas
+- Automated validation of food search results
+- Regression testing for calculation accuracy
+
+Automated testing was not implemented due to the limited scale of the project and the overhead of maintaining testing frameworks. However, the application logic is structured to support automated testing in future iterations.
 
 ### Bug Fixes
 
@@ -184,8 +179,45 @@ SOLUTION: CSS overhaul:
     max-height: 2.5rem; /* Single-item view */
   }
 
+## User Story Validation and Screenshots
+Screenshots of the finished application demonstrate successful implementation of key user stories:
 
-### Validation
+### User Story: Quick Lunch Between Classes
+*As a student, I want to quickly log lunch carbs between classes.*<br>
+*Meal type*: Lunch<br>
+*Selected foods*: avocado - 2g carbs; sweet potato - 20g carbs; walnuts - 4g carbs<br>
+Insulin factor shown as 0.8x<br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Quick%20lunch%20between%20classes.jpg" alt="Quick lunch between classes" width=50% height=50%/>
+
+### User Story: Pre-Game Snack
+*As an athlete, I need accurate insulin calculations for pre-game snacks.*<br>
+*Meal type*: Afternoon Snack<br>
+*Small carb meal*: greek yogurt - 4g carbs; raspberries - 5g carbs<br>
+Reduced insulin requirement visible<br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Pre-game%20snack.jpg" alt="Pre-game snack" width=50% height=50%/>
+
+### User Story: Understanding GI Impact
+*As a newly diagnosed teen, I want to understand glycaemic impact.*<br>
+*Meal type*: Breakfast<br>
+*Selected foods*: sweet potato - 20g carbs; hummus - 8g carbs; broccoli - 4g carbs<br>
+Displayed GI value<br>
+GI guide visible below<br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_3%20-%20desktop_992px.jpg" alt="Understanding GI impact" width=50% height=50%/>
+
+## Future Features
+- Mobile App Integration - Sync with Apple Health/Google Fit
+- Bolus Calculator - Factor in current blood glucose levels
+- Meal History - Track trends over time
+- Social Sharing - Safe recipe exchange between users
+
+## Technologies Used
+Frontend: HTML5, CSS3, Bootstrap 5
+Logic: Vanilla JavaScript
+Data: Local JSON food database
+UI: SweetAlert (Swal) for modals
+APIs: Nutritionix integration (future)
+
+## Validation
 - [W3C HTML Validator](https://validator.w3.org/) <br>
 (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/HTML_checker.jpg)
 
@@ -195,7 +227,7 @@ SOLUTION: CSS overhaul:
 - [JS Hint](https://jshint.com/) <br>
   (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/JS_checker.jpg)
 
-### Performance
+## Performance
 [Lighthouse Score]  
 (https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/lighthouse-test/Lighthouse_sweeteen.jpg)
 
@@ -222,6 +254,7 @@ No external images used (minimalist design)
 Huge thanks to my lecturer and above all to my mentor who provided the simplest and most effective solutions when it came to implementing them in the app.
 As usual, big thanks to the City of Bristol College and Code Institute.
 Last but not least - thanks to Urszula who inspired me to make this app.
+
 
 
 
