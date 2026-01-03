@@ -186,23 +186,23 @@ Screenshots of the finished application demonstrate successful implementation of
 *As a student, I want to quickly log lunch carbs between classes.*<br>
 *Meal type*: Lunch<br>
 *Selected foods*: avocado - 2g carbs; sweet potato - 20g carbs; walnuts - 4g carbs<br>
-Insulin factor shown as 0.8x<br>
-<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Quick%20lunch%20between%20classes.jpg" alt="Quick lunch between classes" width=50% height=50%/>
+Insulin factor shown as 0.8x<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Quick%20lunch%20between%20classes.jpg" alt="Quick lunch between classes" width=60% height=60%/>
 
 ### User Story: Pre-Game Snack
 *As an athlete, I need accurate insulin calculations for pre-game snacks.*<br>
 *Meal type*: Afternoon Snack<br>
 *Small carb meal*: greek yogurt - 4g carbs; raspberries - 5g carbs<br>
-Reduced insulin requirement visible<br>
-<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Pre-game%20snack.jpg" alt="Pre-game snack" width=50% height=50%/>
+Reduced insulin requirement visible<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Pre-game%20snack.jpg" alt="Pre-game snack" width=60% height=60%/>
 
 ### User Story: Understanding GI Impact
 *As a newly diagnosed teen, I want to understand glycaemic impact.*<br>
 *Meal type*: Breakfast<br>
 *Selected foods*: sweet potato - 20g carbs; hummus - 8g carbs; broccoli - 4g carbs<br>
 Displayed GI value<br>
-GI guide visible below<br>
-<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/wireframes/Sweeteen%20Meal%20Planner_3%20-%20desktop_992px.jpg" alt="Understanding GI impact" width=50% height=50%/>
+GI guide visible below<br><br>
+<img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/screenshots%20-%20user%20stories/Understanding%20GI%20impact%20-%20breakfast.jpg" alt="Understanding GI impact" width=60% height=60%/>
 
 ## Future Features
 - Mobile App Integration - Sync with Apple Health/Google Fit
@@ -254,6 +254,7 @@ No external images used (minimalist design)
 Huge thanks to my lecturer and above all to my mentor who provided the simplest and most effective solutions when it came to implementing them in the app.
 As usual, big thanks to the City of Bristol College and Code Institute.
 Last but not least - thanks to Urszula who inspired me to make this app.
+
 
 
 
