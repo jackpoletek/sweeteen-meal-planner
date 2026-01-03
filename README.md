@@ -227,7 +227,7 @@ APIs: Nutritionix integration (future)
 - JSHint - No critical issues<br>
 <img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/validators-results/JS_checker.jpg" alt="JSHint" width=50% height=50%/><br>
 
-- Lighthouse Audit - High scores for Accessibility, Performance, and Best Practices<br><
+- Lighthouse Audit - High scores for Accessibility, Performance, and Best Practices<br>
 <img src="https://github.com/jackpoletek/sweeteen-meal-planner/blob/main/assets/lighthouse-test/Lighthouse_sweeteen.jpg" alt="Lighthouse Score" width=50% height=50%/>
 
 ## Deployment
@@ -253,6 +253,7 @@ No external images used (minimalist design)
 ## Aknowledgements:
 Huge thanks to my lecturer and mentor for guidance throughout development, to City of Bristol College and Code Institute for academic support.
 Last but not least - thanks to Urszula who inspired the project concept.
+
 
 
 
